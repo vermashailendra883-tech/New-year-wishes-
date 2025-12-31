@@ -1,351 +1,346 @@
-<script type="text/javascript">
-  atOptions = {
-  	'key' : 'd2b642633991daec075852b2dc6e8ce9',
-  	'format' : 'iframe',
-  	'height' : 60,
-  	'width' : 468,
-  	'params' : {}
-  };
-</script>
-<script
-  type="text/javascript"
-  src="//www.highperformanceformat.com/d2b642633991daec075852b2dc6e8ce9/invoke.js"
-></script>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year 2026</title>
-    <style>
-        /* --- CSS STYLING --- */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Dharmik Theme: Saffron, Red, Maroon */
-            background: linear-gradient(135deg, #ff9933, #ff0000, #590000);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            color: #fff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year 2026</title>
+<!-- हिंदी फोंट्स -->
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<!-- स्क्रीनशॉट लेने वाली स्क्रिप्ट -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
-        /* Canvas for Fireworks */
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
+<style>
+    :root {
+        --saffron: #FF9933;
+        --maroon: #800000;
+        --gold: #FFD700;
+        --cream: #fff5e6;
+    }
 
-        /* Main Card */
-        .card {
-            background: rgba(40, 0, 0, 0.6); /* Darker transparent bg for contrast */
-            backdrop-filter: blur(8px);
-            padding: 25px;
-            border-radius: 20px;
-            border: 2px solid #ffcc00;
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
-            position: relative;
-            z-index: 10;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Tiro Devanagari Hindi', serif;
+        background: radial-gradient(circle, #ffcc80, #ff9933, #e65100);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+    }
 
-        /* Religious Symbols */
-        .symbol {
-            font-size: 2.5em;
-            color: rgba(255, 255, 255, 0.4);
-            position: absolute;
-            top: 10px;
-            font-weight: bold;
-        }
-        .left-sym { left: 20px; }
-        .right-sym { right: 20px; }
+    /* --- CARD DESIGN --- */
+    .card-wrapper {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-        h1 {
-            font-size: 2.2em;
-            margin: 10px 0;
-            color: #ffeb3b;
-            text-shadow: 3px 3px 0px #8b0000;
-            line-height: 1.2;
-        }
+    /* जिस हिस्से का फोटो लेना है */
+    .card {
+        position: relative;
+        width: 95%;
+        max-width: 400px; /* मोबाइल के लिए सही साइज */
+        background: #fff;
+        border: 4px solid var(--gold);
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(139, 0, 0, 0.5);
+        z-index: 10;
+        overflow: hidden; /* ताकि फोटो बाहर न निकले */
+    }
 
-        /* GIF Container */
-        .gif-box {
-            border: 3px solid #ffcc00;
-            padding: 5px;
-            border-radius: 15px;
-            background: #fff;
-            margin: 15px auto;
-            box-shadow: 0 0 15px #ff9933;
-        }
-        
-        .gif-box img {
-            max-width: 100%;
-            display: block;
-            border-radius: 10px;
-        }
+    /* हेडर */
+    .top-decor { font-size: 35px; color: var(--saffron); margin-top: -10px; }
+    
+    h1 {
+        font-family: 'Rozha One', serif;
+        color: var(--maroon);
+        font-size: 26px;
+        margin: 5px 0;
+        text-shadow: 1px 1px 1px #ffcc80;
+    }
 
-        /* Sender Name Animation */
-        #wishMessage {
-            font-size: 1.4em;
-            margin: 20px 0;
-            min-height: 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    .year {
+        font-size: 45px;
+        background: linear-gradient(to right, #ff512f, #dd2476);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
 
-        .highlight-name {
-            font-size: 1.5em;
-            color: #00ffea;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px #000;
-            animation: popName 1s infinite alternate;
-            margin-top: 5px;
-            text-transform: capitalize;
-        }
+    .wishes-text {
+        background: var(--cream);
+        color: #d84315;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 15px;
+        margin: 10px 0;
+        border-left: 5px solid var(--saffron);
+        line-height: 1.4;
+    }
 
-        @keyframes popName {
-            from { transform: scale(1); text-shadow: 0 0 10px #00ffea; }
-            to { transform: scale(1.1); text-shadow: 0 0 20px #fff; }
-        }
+    /* --- PHOTO FRAME --- */
+    .photo-frame {
+        width: 100%;
+        height: 300px; 
+        background-color: #000;
+        border: 5px double var(--gold);
+        border-radius: 10px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
 
-        /* Input Area */
-        .input-area {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 15px;
-            margin-top: 20px;
-        }
+    .corner { position: absolute; width: 25px; height: 25px; border: 3px solid var(--saffron); z-index: 5; }
+    .tl { top: 5px; left: 5px; border-right: 0; border-bottom: 0; }
+    .tr { top: 5px; right: 5px; border-left: 0; border-bottom: 0; }
+    .bl { bottom: 5px; left: 5px; border-right: 0; border-top: 0; }
+    .br { bottom: 5px; right: 5px; border-left: 0; border-top: 0; }
 
-        input[type="text"] {
-            width: 75%;
-            padding: 12px;
-            border-radius: 30px;
-            border: 2px solid #ffcc00;
-            font-size: 16px;
-            text-align: center;
-            outline: none;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+    #userPhoto {
+        width: 100%; height: 100%;
+        object-fit: contain; 
+    }
 
-        /* Magic Button */
-        .magic-btn {
-            background: linear-gradient(45deg, #ff512f, #dd2476);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-size: 16px;
-            cursor: pointer;
-            width: 85%;
-            font-weight: bold;
-            margin-bottom: 10px;
-            transition: 0.3s;
-        }
+    /* --- ACTION BUTTONS --- */
+    .controls {
+        width: 95%;
+        max-width: 400px;
+        text-align: center;
+        margin-bottom: 20px;
+        z-index: 20;
+    }
 
-        /* WhatsApp Button */
-        .wa-btn {
-            display: none; /* Hidden initially */
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 16px;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 85%;
-            margin: 10px auto 0 auto;
-            border: 2px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            animation: pulse 2s infinite;
-        }
+    .file-btn {
+        background: var(--maroon);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 14px;
+        display: inline-block;
+        margin: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+    .download-btn {
+        background: #007bff; /* Blue for download */
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
 
-        /* SVG Icon styling */
-        .wa-icon {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
+    .share-link-btn {
+        background: #25D366; /* WhatsApp Green */
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
 
-        /* --- NEW AD CONTAINER STYLE --- */
-        .ad-container {
-            margin: 20px auto 5px auto;
-            width: 320px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border-radius: 5px;
-            /* Optional: White background if ad is transparent */
-            background: rgba(255, 255, 255, 0.1); 
-        }
+    /* --- ADS --- */
+    .ad-wrapper {
+        margin-top: 8px;
+        padding: 2px;
+        background: #f4f4f4;
+        border: 1px dashed #ccc;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 
-    </style>
+    /* --- CANVAS --- */
+    #bgCanvas {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: 1; pointer-events: none;
+    }
+
+</style>
 </head>
-<body>
+<body onclick="enableAudio()">
 
-    <canvas id="fireworksCanvas"></canvas>
+    <audio id="bgMusic" loop autoplay>
+        <source src="wishes.mp3" type="audio/mp3">
+    </audio>
 
-    <div class="card">
-        <div class="symbol left-sym">ॐ</div>
-        <div class="symbol right-sym">卐</div>
+    <canvas id="bgCanvas"></canvas>
 
-        <h1>Happy New Year<br>2026</h1>
+    <!-- WRAPPER: हम सिर्फ इस हिस्से का फोटो लेंगे -->
+    <div class="card-wrapper" id="captureArea">
+        <div class="card">
+            <div class="top-decor">🕉️ ✨ 🕉️</div>
+            <h1>नव वर्ष की शुभकामनाएं<br><span class="year">2026</span></h1>
 
-        <div class="gif-box">
-            <!-- IMAGE FILE NAME MUST BE 'new year.gif' -->
-            <img src="new year.gif" alt="Happy New Year">
-        </div>
+            <div class="wishes-text">
+                "आपको और आपके पूरे परिवार को<br>
+                नए साल की हार्दिक शुभकामनाएं।"<br>
+                🙏 जय श्री राम 🙏
+            </div>
 
-        <div id="wishMessage">
-            <!-- Text will change via JS -->
-            Create your wish below 👇
-        </div>
+            <!-- PHOTO SECTION -->
+            <div class="photo-frame">
+                <div class="corner tl"></div><div class="corner tr"></div>
+                <div class="corner bl"></div><div class="corner br"></div>
+                <!-- Default Image -->
+                <img id="userPhoto" src="https://cdn-icons-png.flaticon.com/512/8802/8802672.png" alt="Happy New Year" crossorigin="anonymous">
+            </div>
 
-        <div class="input-area">
-            <input type="text" id="nameBox" placeholder="Enter Your Name Here">
+            <!-- AD 1 inside Card (Will be in photo) -->
+            <div class="ad-wrapper">
+                 <script>
+                    atOptions = {
+                        'key' : '4acc0331fedb6a2050fa6fc5179175d7',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/4acc0331fedb6a2050fa6fc5179175d7/invoke.js"></script>
+            </div>
             
-            <button class="magic-btn" onclick="generateLink()">Link Create Karein ✨</button>
-            
-            <!-- WhatsApp Button (Initially Hidden) -->
-            <a id="shareBtn" class="wa-btn" href="#" target="_blank">
-                <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 3.401 3.482-.913c.991.56 1.761.868 2.923.868l.055.001c3.181.002 5.768-2.586 5.769-5.767.001-3.181-2.587-5.767-5.769-5.767zm0-6.172c6.627 0 12 5.373 12 12s-5.373 12-12 12c-2.122 0-4.104-.549-5.836-1.503l-6.164 1.63 1.66-5.996c-1.054-1.787-1.66-3.865-1.66-6.082 0-6.627 5.373-12 12-12z"/></svg>
-                Share on WhatsApp
-            </a>
+            <p style="font-size:10px; color:#666; margin-top:5px;">Create your own at: GitHub/HappyNewYear</p>
         </div>
-
-        <!-- =========== AD AREA START =========== -->
-        <div class="ad-container">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : 'c8795cc4ab91fa3dcc8ef5566708cc47',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/c8795cc4ab91fa3dcc8ef5566708cc47/invoke.js"></script>
-        </div>
-        <!-- =========== AD AREA END =========== -->
-
     </div>
 
-    <script>
-        /* --- FIREWORKS LOGIC (Enhanced 3x) --- */
-        const canvas = document.getElementById('fireworksCanvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
+    <!-- CONTROLS (ये फोटो में नहीं आएंगे) -->
+    <div class="controls">
+        <label class="file-btn">
+            📷 1. अपनी फोटो चुनें
+            <input type="file" style="display:none" accept="image/*" onchange="uploadImage(event)">
+        </label>
 
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
+        <!-- DOWNLOAD BUTTON -->
+        <button class="download-btn" onclick="downloadCard()">
+            📥 2. कार्ड डाउनलोड करें (Photo)
+        </button>
 
-        function createExplosion(x, y) {
-            // Increased particles per explosion (from 30 to 80)
-            const particleCount = 80; 
-            const hue = Math.random() * 360;
-            
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: x,
-                    y: y,
-                    color: `hsl(${hue}, 100%, 60%)`,
-                    // Increased speed range for bigger explosion radius
-                    vx: (Math.random() - 0.5) * 12, 
-                    vy: (Math.random() - 0.5) * 12,
-                    life: 120, // Longer life
-                    alpha: 1,
-                    gravity: 0.05
-                });
+        <p style="font-size:12px; color:white; text-shadow:1px 1px 2px black;">
+            *डाउनलोड करने के बाद, फोटो WhatsApp पर भेजें।
+        </p>
+
+        <!-- SHARE LINK BUTTON -->
+        <button class="share-link-btn" onclick="shareLink()">
+            🔗 3. सिर्फ लिंक भेजें
+        </button>
+
+        <!-- AD 2 Outside -->
+        <div class="ad-wrapper" style="margin-top: 10px;">
+            <script async="async" data-cfasync="false" src="https://pl28208324.effectivegatecpm.com/2d3e3e20d096ece9151df243cb876ebf/invoke.js"></script>
+            <div id="container-2d3e3e20d096ece9151df243cb876ebf"></div>
+        </div>
+    </div>
+
+<script>
+    /* 1. AUDIO */
+    const audio = document.getElementById('bgMusic');
+    window.onload = function() {
+        audio.play().catch(() => console.log("Touch needed"));
+        initAnimation();
+    };
+    function enableAudio() { if (audio.paused) audio.play(); }
+
+    /* 2. UPLOAD PHOTO */
+    function uploadImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('userPhoto').src = e.target.result;
+                enableAudio();
             }
+            reader.readAsDataURL(file);
         }
+    }
 
-        function animate() {
-            // Trail effect
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; 
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+    /* 3. DOWNLOAD CARD AS IMAGE (MAGIC PART) */
+    function downloadCard() {
+        // Select the card area
+        const cardElement = document.getElementById('captureArea');
+        
+        // Convert to Image
+        html2canvas(cardElement, {
+            scale: 2, // Better quality
+            backgroundColor: null,
+            useCORS: true
+        }).then(canvas => {
+            // Create download link
+            const link = document.createElement('a');
+            link.download = 'Happy-New-Year-2026.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        });
+    }
 
-            // Update particles
-            particles.forEach((p, index) => {
-                if (p.life > 0) {
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-                    ctx.fillStyle = p.color;
-                    ctx.globalAlpha = p.alpha;
-                    ctx.fill();
-                    
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    p.vy += p.gravity;
-                    p.life--;
-                    p.alpha -= 0.01;
-                } else {
-                    particles.splice(index, 1);
-                }
-            });
+    /* 4. SHARE LINK ONLY */
+    function shareLink() {
+        const text = "✨ *Happy New Year 2026* ✨\n\nनए साल की बधाई यहाँ देखें और अपना कार्ड बनायें:\n" + window.location.href;
+        window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+    }
 
-            // LOGIC TO INCREASE FREQUENCY (3x More)
-            if (Math.random() < 0.15) { 
-                let count = Math.floor(Math.random() * 3) + 1;
-                for(let k=0; k<count; k++){
-                    createExplosion(
-                        Math.random() * canvas.width, 
-                        Math.random() * canvas.height * 0.6 
-                    );
-                }
-            }
+    /* 5. ANIMATION */
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let particles = [];
+    const colors = ['#FF9933', '#FFD700', '#FF4500', '#FFFFFF'];
 
-            requestAnimationFrame(animate);
+    class Flower {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * -canvas.height;
+            this.size = Math.random() * 6 + 4;
+            this.speed = Math.random() * 2 + 1;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
         }
-        animate(); // Start Fireworks
-
-        /* --- LINK GENERATION LOGIC --- */
-        const urlParams = new URLSearchParams(window.location.search);
-        const senderName = urlParams.get('n');
-        const textBox = document.getElementById('wishMessage');
-
-        if (senderName) {
-            // View Mode
-            textBox.innerHTML = `Happy New Year 2026<br>From<br><div class="highlight-name">${senderName}</div>`;
-            document.title = `${senderName} sent you a wish!`;
-        } else {
-            // Creator Mode
-            textBox.innerHTML = "Apna naam likhein aur jaadu dekhein! ✨";
+        update() {
+            this.y += this.speed;
+            if (this.y > canvas.height) this.y = -10;
         }
+        draw() {
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+    function initAnimation() {
+        for(let i=0; i<60; i++) particles.push(new Flower());
+        animate();
+    }
+    function animate() {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+    }
+</script>
 
-        function generateLink() {
-            const name = document.getElementById('nameBox').value.trim();
-            if (name === "") {
-                alert("Please enter your name!");
-                return;
-            }
-
-            // Create Link
-            const baseUrl = window.location.href.split('?')[0];
-            const fullLink = `${baseUrl}?n=${encodeURIComponent(name)}`;
+</body>
+</html>
